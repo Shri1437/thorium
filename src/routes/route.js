@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/students/:name', function(req, res) {
-    let studentName = req.params.name
-    console.log(studentName)
-    res.send(studentName)
+router.get('/test-me', function(req,res){
+    res.send('my first ever api!')
+})
+
+router.get('/movies', function(req, res) {
+    res.send(['Kedarnath', 'POP','Holmes','F&F','Marvel'])
+        
 })
 
 
