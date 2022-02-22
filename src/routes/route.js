@@ -5,8 +5,15 @@ router.get('/test-me', function(req,res){
     res.send('my first ever api!')
 })
 
-router.get('/movies', function(req, res) {
-    res.send(['Kedarnath', 'POP','Holmes','F&F','Marvel'])
+router.get('/movies/:movieID', function(req, res) {
+    mov = ['Kedarnath', 'POP','Holmes','F&F','Marvel']
+    let value = req.params.movieID
+    if(value>mov.length-1){
+        res.send('Not Availbe')
+    }
+    else{
+        res.send(mov[value])
+    }
         
 })
 
