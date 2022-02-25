@@ -31,7 +31,7 @@ let persons= [
  
 
 router.post('/election', function (req, res) {
-    let votingAge = req.query.input;
+    let input = req.query.input;
     let finalArray = [];
     for(let i = 0;i<persons.length;i++){
         if(persons[i].age > input){
