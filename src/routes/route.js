@@ -34,7 +34,7 @@ router.post('/players/:playerName/bookings/:bookingId',function(req,res){
     let bookingId= req.params.bookingId
     for (let i=0; i<players.length; i++){
         if (players[i].name==name){
-            for (let j=0; j<player[i].bookings.length; j++){
+            for (let j=0; j<players[i].bookings.length; j++){
                 if(player[i].bookings[j].bookingNumber==bookingId){
                     return res.send('Booking with this ID is already present for the player')
                 }
